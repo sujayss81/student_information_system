@@ -33,6 +33,7 @@
 			<div class="down">
 				<div class="button">
 				<div><a href="/insert_records" class="btn btn-secondary add">Add a new student</a></div>
+				<div><a href="/choose_student" class="btn btn-secondary view">Enter student marks</a></div>
 				<div><a href="/view_records" class="btn btn-secondary view">View all records</a></div>
 				</div>	
 		</div>

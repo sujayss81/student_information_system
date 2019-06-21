@@ -14,7 +14,7 @@ class CreateStudentTable extends Migration
     public function up()
     {
         Schema::create('student', function (Blueprint $table) {
-            // $table->bigIncrements('id');
+            $table->bigIncrements('id');
             $table->string('username',40);
             $table->string('password',32);
             $table->biginteger('usn');
@@ -25,6 +25,15 @@ class CreateStudentTable extends Migration
             $table->integer('tch');
             $table->float('perc');
             $table->timestamps();
+            $table->integer('mark1')->nullable();
+            $table->integer('mark2')->nullable();
+            $table->integer('mark3')->nullable();
+            $table->integer('mark4')->nullable();
+            $table->integer('mark5')->nullable();
+            $table->integer('mark6')->nullable();
+            $table->integer('mtotal')->nullable();
+            $table->integer('mperc')->nullable();
+
         });
     }
 

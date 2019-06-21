@@ -16,7 +16,7 @@
 		<label for="name">Name</label>
 		<input type="text" name="name" class="form-control col-6" placeholder="Enter Student name"><br>
 		<label for="usn">USN</label>
-		<input type="text" name="usn" class="form-control col-6" value="Enter USN"><br><br>
+		<input type="text" name="usn" class="form-control col-6" placeholder="Enter USN"><br><br>
 		<label for="branch" >Branch</label>
 		<select name="branch" class="custom-select custom-select-sm">
 			<option>--</option>

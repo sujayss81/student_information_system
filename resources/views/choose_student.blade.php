@@ -9,7 +9,7 @@
 	<div class="container">
 		<div class="text-center">All records</div>
 	<div class="container">
-	<table border="1" class="table table-boredered table-hover text-center">
+	<table border="1" class="table table-boredered table-hover">
 		<thead>
 			<tr>
 				<th>USN</th>
@@ -19,9 +19,7 @@
 				<th>email</th>
 				<th>Classes Attended</th>
 				<th>Total Classes held</th>
-				<th>Total Marks</th>
 				<th>Percentage</th>
-				<th>Attendance</th>
 				<th>Action</th>
 			</tr>	
 		</thead>
@@ -35,10 +33,8 @@
 				<td>{{$item->email}}</td>
 				<td>{{$item->ca}}</td>
 				<td>{{$item->tch}}</td>
-				<td><div>{{$item->mtotal}}</div><a href="/marks_details/{{$item->usn}}">Details</a></td>
-				<td>{{$item->mperc}}%</td>
 				<td>{{$item->perc}}%</td>
-				<td><a href="/update/{{$item->id}}">Update</a>/<a href="/delete/{{$item->id}}"  onclick = "return confirm('Are you sure you want to Delete?')">Delete</a></td>
+				<td><a href="/insert_marks/{{$item->usn}}">Select</a></td>
 			</tr>	
 			@endforeach	
 		</tbody>

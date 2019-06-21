@@ -71,9 +71,9 @@ class login_controller extends Controller
     		";   
          }   
     }
-    public function delete($usn)
+    public function delete($id)
     {
-        $res = student::where('usn','=',$usn)->delete();
+        $res = student::where('id','=',$id)->delete();
         if(isset($res))
         {
             echo "
@@ -133,9 +133,9 @@ class login_controller extends Controller
             }
         }
     }
-    public function update($usn)
+    public function update($id)
     {
-        $res = student::where('usn','=',$usn)->get();
+        $res = student::where('id','=',$id)->get();
         return view('update',compact('res'));
     }
     public function edit(Request $res)
@@ -188,6 +188,7 @@ class login_controller extends Controller
      public function logout_admin()
     {
         Session::forget('id');
+        Session::forget('usn');
         echo "<script>alert('Logged out sucessfully')</script>";
         return view('admin_login');
     }
@@ -327,6 +328,78 @@ class login_controller extends Controller
                 </script>
             ";
         }  
+    }
+    public function insert_marks($usn)
+    {
+        Session::put('usn',$usn);
+        return view('insert_marks');
+    }
+    public function marks(Request $res){
+        $usn = Session::get('usn');
+        $m1 = $res->input('mark1');
+        $m2 = $res->input('mark2');
+        $m3 = $res->input('mark3');
+        $m4 = $res->input('mark4');
+        $m5 = $res->input('mark5');
+        $m6 = $res->input('mark6');
+        $tot = ($m1 + $m2 + $m3 + $m4 + $m5 + $m6);
+        $mperc = ($tot/600)*100;
+        $update = student::where('usn','=',$usn)->update(['mark1'=>$m1, 'mark2'=>$m2, 'mark3'=>$m3, 'mark4'=>$m4, 'mark5'=>$m5, 'mark6'=>$m6, 'mperc'=>$mperc, 'mtotal'=>$tot]); 
+        Session::forget('usn');
+        if($update)
+        {
+            echo "
+            <script>
+            alert('Marks Added')
+            window.location = '/admin_home'
+            </script>";
+        }
+        else
+        {
+            echo "
+            <script>
+            alert('Failed')
+            window.location = '/choose_student'
+            </script>";
+        }
+    }
+    public function marks_details($usn)
+    {
+        Session::put('usn',$usn);
+        $res = student::where('usn','=',$usn)->get();
+        return view('marks_details',compact('res'));
+    }
+    public function update_marks($id){
+        $res = student::where('id','=',$id)->get();
+        return view('update_marks',compact('res'));
+    }
+    public function mupdate(Request $res){
+        $usn = Session::get('usn');
+        $m1 = $res->input('mark1');
+        $m2 = $res->input('mark2');
+        $m3 = $res->input('mark3');
+        $m4 = $res->input('mark4');
+        $m5 = $res->input('mark5');
+        $m6 = $res->input('mark6');
+        $tot = ($m1 + $m2 + $m3 + $m4 + $m5 + $m6);
+        $mperc = ($tot/600)*100;
+        $update = student::where('usn','=',$usn)->update(['mark1'=>$m1, 'mark2'=>$m2, 'mark3'=>$m3, 'mark4'=>$m4, 'mark5'=>$m5, 'mark6'=>$m6, 'mperc'=>$mperc, 'mtotal'=>$tot]); 
+        if($update)
+        {
+            echo "
+            <script>
+            alert('Marks Updated')
+            window.location = '/marks_details/{$usn}'
+            </script>";
+        }
+        else
+        {
+            echo "
+            <script>
+            alert('Failed')
+            window.location = '/choose_student'
+            </script>";
+        }
     }
 }
 ?>
