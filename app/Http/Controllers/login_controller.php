@@ -401,5 +401,10 @@ class login_controller extends Controller
             </script>";
         }
     }
+    public function student_marks(){
+        $usn = Session::get('usn');
+        $res = student::where('usn','=',$usn)->get();
+        return view('student_marks',compact('res'));
+    }
 }
 ?>

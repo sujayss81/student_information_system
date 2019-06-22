@@ -26,14 +26,16 @@
  					 <li class="nav-item">
     					<a class="nav-link active" href="/home">My Profile</a>
   					</li>
-				@foreach($res as $item)
+				<li class="nav-item">
+    			<a class="nav-link" href="/student_marks">Marks</a>
+  				</li>
 				<li class="nav-item">
     			<a class="nav-link" href="/attendance">Attendance Details</a>
   				</li>
   				<li class="nav-item">
   					<a class="nav-link" href="/security">Security</a>
   				</li>
-				@endforeach
+				
 			</ul>
 				</div>
 			<div class="down">

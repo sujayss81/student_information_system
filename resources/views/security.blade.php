@@ -25,6 +25,9 @@
  					 <li class="nav-item">
     					<a class="nav-link" href="/home">My Profile</a>
   					</li>
+  						<li class="nav-item">
+    			<a class="nav-link" href="/student_marks">Marks</a>
+  				</li>
 				<li class="nav-item">
     			<a class="nav-link" href="/attendance">Attendance Details</a>
   				</li>

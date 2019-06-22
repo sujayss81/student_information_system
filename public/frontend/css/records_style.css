@@ -10,3 +10,12 @@ div.text-center{
 body{
 	background-color: #b3d7ff;
 }
+table.mytable{
+	margin-top: 15%;
+}
+button.mybutton{
+	margin-top: 5%;
+}
+div.myheader{
+	margin-top: 5%;
+}

@@ -53,5 +53,6 @@ Route::post('/marks','login_controller@marks');
 Route::get('/marks_details/{usn}','login_controller@marks_details');
 Route::get('/update_marks/{id}','login_controller@update_marks');
 Route::post('/mupdate','login_controller@mupdate');
+Route::get('/student_marks','login_controller@student_marks');
 ?>
 
