@@ -351,7 +351,7 @@ class login_controller extends Controller
             echo "
             <script>
             alert('Marks Added')
-            window.location = '/admin_home'
+            window.location = '/choose_student'
             </script>";
         }
         else

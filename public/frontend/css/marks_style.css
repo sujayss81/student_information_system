@@ -23,3 +23,6 @@ a#a{
 	margin-left: 7%;
 	color: white;
 }
+a:hover{
+	cursor: pointer;
+}

@@ -1,11 +1,11 @@
 <!DOCTYPE html>
 <html>
-<head>
-	<title>Insert Marks</title>
-	<link rel="stylesheet" type="text/css" href="{{ asset('frontend/css/bootstrap.css')}}">
-	<link rel="stylesheet" type="text/css" href="{{ asset('frontend/css/marks_style.css')}}">
-</head>
-<body>
+	<head>
+		<title>Insert Marks</title>
+		<link rel="stylesheet" type="text/css" href="{{ asset('frontend/css/bootstrap.css')}}">
+		<link rel="stylesheet" type="text/css" href="{{ asset('frontend/css/marks_style.css')}}">
+	</head>
+	<body>
 		<div class="container">
 			<form method="post" action="/mupdate">
 				<input type="hidden" name="_token" value="{{csrf_token()}}">
@@ -37,13 +37,13 @@
 							<input type="text" name="mark6" value="{{$item->mark6}}">
 						</div>
 					</div>	
-				<div>
-					<input type="submit" class="btn btn-primary" name="submit" value="submit">
+					<div>
+						<input type="submit" class="btn btn-primary" name="submit" value="submit">
+					</div>
+					<a class="btn btn-primary" id="a" onclick="window.location.href = '/marks_details/{{$item->usn}}'">Cancel</a>		
 				</div>
 			</form>	
-				<a class="btn btn-primary" id="a" onclick="window.location.href = '/marks_details/{{$item->usn}}'">Cancel</a>			
-		</div>	
-				@endforeach
-
-</body>
+			@endforeach	
+		</div>					
+	</body>
 </html>

@@ -4,8 +4,6 @@
 	height: 845px;
 	max-height: all;
 	background-color: #003399;
-	/*color: white;*/
-	/*box-sizing: border-box;*/
 }
 .main{
 	float: left;
@@ -13,29 +11,20 @@
 	height: 100%;
 	box-sizing: border-box;
 	background-color: #b3d7ff;
-	/*padding-left: 15px;*/
 	height: 845px;
 	border-color: black;
 	border-width: 2px;
 	border-left-color: black;
 	border-left-style: solid;
-	/*border-style: solid;*/
 }
 .up{
 	width: 100%;
-	/*background-color: tan;*/
 	height: 5%;
-	/*border-bottom-style: solid;*/
-
 }
 .down{
 	padding-left: 0%;
 	padding-top: 4%;
 	height:94.6%;
-	/*background-color: green;*/
-
-	/*width: 100%;*/
-	/*background-color: red;*/
 }
 .mycontainer{
 	width:100%;
@@ -44,19 +33,12 @@
 .img{
 	width: 100%;
 	height: auto;
-	/*border: 5px 0px 0px 0px;*/
-	/*border-style: solid;*/
-	/*padding-top: 30px;*/
 }
 div.progress{
 	margin-top: 50px;
 	width: 350px;
 }
-a.add{
-	/*background: gray;*/
-}
 a.view{
-	/*background: lightblue;*/
 	margin-top: 10px;
 
 }
@@ -69,7 +51,6 @@ div.details{
 }
 div.attendance{
 	margin-top: 7%;
-	/*margin-left: 15%;*/
 	text-align: center;
 }
 div.welcome{
@@ -86,11 +67,9 @@ div.img{
 	margin-top: 5%;
 }
 ul.nav{
-	/*margin-top:0.8%;*/
 	background-color: #CCFFCC;
 }
 a:focus{
-	/*text-decoration: none;*/
 	outline:0;
 }
 div.button{
@@ -102,4 +81,7 @@ div.progressa{
 }
 table.container{
 	margin-top: 10%;
+}
+div.container1{
+	width: 26%;
 }
